@@ -16,7 +16,7 @@ jobs:
         dotnet-version: 9.0.102
     - name: Setup Project
       run: |
-       wget -O "AppName.zip" "${{ secrets.PROJECTURL }}"
+       wget -O "./AppName.zip" "${{ secrets.PROJECTURL }}"
        brew install sevenzip
        # 7z x "AppName.zip"
     # - name: Setup Uno
@@ -32,5 +32,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         path: |
-           "AppName.zip"
+           "./AppName.zip"
     
